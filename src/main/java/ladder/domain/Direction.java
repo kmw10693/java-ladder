@@ -1,4 +1,4 @@
-package ladder.exception;
+package ladder.domain;
 
 public enum Direction {
     /**
@@ -10,7 +10,7 @@ public enum Direction {
     NONE(0);
 
     /**
-     * RIGHT(1) direcitons = 1
+     * RIGHT(1) directions = 1
      * LEFT(-1) directions = -1
      * NONE(0) = directions = 0
      */

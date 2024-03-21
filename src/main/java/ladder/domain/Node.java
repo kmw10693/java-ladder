@@ -1,14 +1,11 @@
-package ladder.utils;
-
-import ladder.exception.Direction;
+package ladder.domain;
 
 /**
  * 각 행은 Node를 통해서 관리한다.
- *  상속 대신 조합 (Compositon)을 통해 클래스를 관리해보자.
- *  상속은 상위 클래스가 변경되면 하위 클래스까지 변경되어, 의존성이 강한 코드가 만들어진다.
+ * 상속 대신 조합 (Compositon)을 통해 클래스를 관리해보자.
+ * 상속은 상위 클래스가 변경되면 하위 클래스까지 변경되어, 의존성이 강한 코드가 만들어진다.
  */
 public class Node {
-
     // 필드는 Direction 클래스를 갖는다. 조합 사용
     private Direction direction;
 
@@ -38,6 +35,5 @@ public class Node {
     public static Node of(Direction direction) {
         return new Node(direction);
     }
-
 
 }

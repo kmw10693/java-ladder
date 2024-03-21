@@ -1,9 +1,8 @@
-package ladder.core;
+package ladder.application;
 
-import ladder.utils.Position;
+import ladder.domain.Position;
 
 public class LadderGame {
-
     private final LadderCreator ladderCreator;
 
     public LadderGame(LadderCreator ladderCreator) {
@@ -12,9 +11,7 @@ public class LadderGame {
 
     public int run(Position position) {
         LadderRunner ladderRunner = new LadderRunner(ladderCreator.getRows());
-
         return ladderRunner.run(position);
     }
-
 
 }

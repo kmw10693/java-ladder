@@ -1,8 +1,7 @@
-package ladder.utils;
+package ladder.application;
 
-import ladder.core.LadderCreator;
-import ladder.core.LadderGame;
-import ladder.core.LadderRunner;
+import ladder.domain.NaturalNumber;
+import ladder.domain.Position;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -24,14 +23,14 @@ class LadderGameTest {
 
     @Test
     void 사다리_사람_예외_처리_확인() {
-        //when
+        //given
         NaturalNumber numberOfRow = NaturalNumber.of(1);
         NaturalNumber numberOfPerson = NaturalNumber.of(3);
 
         LadderCreator ladderCreator = new LadderCreator(numberOfRow, numberOfPerson);
         LadderGame ladderGame = new LadderGame(ladderCreator);
 
-        //given
+        //when
         int nthOfPerson = 4;
         Position position = Position.of(nthOfPerson);
 
@@ -41,7 +40,7 @@ class LadderGameTest {
 
     @Test
     void 사다리_결과_확인() {
-        //when
+        //given
         NaturalNumber numberOfRow = NaturalNumber.of(3);
         NaturalNumber numberOfPerson = NaturalNumber.of(4);
         LadderCreator ladderCreator = new LadderCreator(numberOfRow, numberOfPerson);
@@ -52,7 +51,7 @@ class LadderGameTest {
         ladderCreator.drawLine(Position.of(1),Position.of(1));
         ladderCreator.drawLine(Position.of(2),Position.of(0));
 
-        //given
+        //when
         int nthOfPerson = 0;
         Position position = Position.of(nthOfPerson);
 

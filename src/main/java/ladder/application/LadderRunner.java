@@ -1,10 +1,9 @@
-package ladder.core;
+package ladder.application;
 
-import ladder.utils.Position;
-import ladder.utils.Row;
+import ladder.domain.Position;
+import ladder.domain.Row;
 
 public class LadderRunner {
-
     // 조합 사용, Row[] 배열 선언
     private final Row[] rows;
 
@@ -13,7 +12,7 @@ public class LadderRunner {
         this.rows = rows;
     }
 
-    // 현재 포지션을 입력받아, 마지막 위치를 표현하는 run() 메서드
+    // 현재 포지션을 입력 받아, 마지막 위치를 표현하는 run() 메서드
     public int run(Position position) {
 
         for (int i = 0; i < rows.length; i++) {
@@ -21,4 +20,5 @@ public class LadderRunner {
         }
         return position.getValue();
     }
+
 }

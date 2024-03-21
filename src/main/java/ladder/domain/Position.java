@@ -1,4 +1,4 @@
-package ladder.utils;
+package ladder.domain;
 
 
 import ladder.exception.ExceptionMessage;
@@ -52,7 +52,6 @@ public class Position {
         return of(position + 1);
     }
 
-
     // 포지션을 가져와 필드와 작은지 비교하는 메서드
     public boolean isSmallerThan(int position) {
         return this.position < position;
@@ -76,7 +75,7 @@ public class Position {
      */
     private static void validatePosition(int position) {
         if(!isPosition(position)) {
-            throw new IllegalArgumentException(ExceptionMessage.POS.getMsg());
+            throw new IllegalArgumentException(ExceptionMessage.INVALID_POSITION.getMessage());
         }
     }
 

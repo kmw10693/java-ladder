@@ -1,6 +1,5 @@
-package ladder.utils;
+package ladder.domain;
 
-import ladder.exception.Direction;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -27,7 +26,7 @@ class NodeTest {
         Position nextPosition = leftNode.move(currentPosition);
 
         //then
-        assertEquals(3, nextPosition.getValue());
+        assertEquals(1, nextPosition.getValue());
     }
 
     @Test
@@ -67,4 +66,5 @@ class NodeTest {
         assertFalse(rightNode.isLeft());
         assertFalse(noneNode.isLeft());
     }
+
 }

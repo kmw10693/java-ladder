@@ -1,4 +1,4 @@
-package ladder.utils;
+package ladder.domain;
 
 import org.junit.jupiter.api.Test;
 
@@ -49,8 +49,6 @@ class RowTest {
         //when
         NaturalNumber numberOfPerson = NaturalNumber.of(3);
         Row row = new Row(numberOfPerson);
-
-
 
         row.drawLine(Position.of(0));
 
@@ -173,4 +171,5 @@ class RowTest {
         //then
         assertThrows(IllegalArgumentException.class, () -> row.drawLine(Position.of(0)));
     }
+
 }
